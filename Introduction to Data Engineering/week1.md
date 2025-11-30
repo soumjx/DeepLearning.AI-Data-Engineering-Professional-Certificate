@@ -198,3 +198,123 @@ Video
 - How to identify end users and their needs.
 - How this relates to business value.
 - How to translate stakeholder needs into system requirements.
+
+
+----------
+
+
+# The Data Engineer Among Other Stakeholders — Essential Notes
+
+## Downstream Stakeholders
+- Data engineers must understand downstream needs to turn raw data into something useful.
+- Downstream data consumers may include:
+  - Analysts
+  - Data scientists
+  - Machine learning engineers
+  - Sales, product, marketing, executives
+
+### Example Requirements from a Business Analyst
+- Need to run SQL queries for analysis, dashboards, trends, predictions.
+- Requirements to clarify:
+  - Query frequency for dashboard refresh
+  - Information needed per query
+  - Useful joins or aggregations to run ahead of time
+  - Acceptable latency (hour-old, day-old, real time)
+  - Agreed definitions of metrics (e.g., time zones and start/end times for daily sales)
+
+### Importance
+- Understanding company strategy helps identify business value in the data served.
+- Data engineers must understand business metrics and stakeholder goals.
+
+## Upstream Stakeholders
+- Upstream stakeholders develop and maintain the source systems that generate raw data.
+- Typically software engineers (internal or third-party).
+- Data engineers act as data consumers; source system owners serve them.
+
+### Upstream Requirements to Clarify
+- Volume, frequency, and format of generated data  
+- Data security and regulatory compliance  
+- Advance notice of disruptions, outages, schema changes
+
+### Collaboration Benefits
+- Open communication can influence how raw data is served.
+- Helps mitigate disruptions to data pipelines.
+
+## Recap
+- Data engineers must understand both upstream and downstream stakeholders.
+- Connect with source system owners to understand incoming data and potential disruptions.
+- Understand downstream goals, business value, and how data supports the organization.
+
+## Next Step
+- Next video discusses business value.
+- Optional video; can skip ahead to requirements gathering.
+
+<img width="1852" height="829" alt="image" src="https://github.com/user-attachments/assets/eb18e3b5-dad8-4a72-a6bc-80c134cec4c7" />
+
+
+
+-----------
+
+
+
+# Requirements Gathering Conversation — Essential Notes
+
+## Purpose
+- Demonstrates an example of a requirements gathering conversation between a data engineer and a key stakeholder (data scientist).
+
+## Stakeholder Context
+- Data scientist needs support for:
+  - Real-time analysis of product sales by region.
+  - Improved data ingestion and processing.
+  - Better support for dashboards and recommendation systems.
+
+## Current Challenges Described by Stakeholder
+- Sales data stored in production database; software engineers restrict direct access.
+- Stakeholder receives **daily data dumps** (CSV, JSON), must manually pull, clean, extract, and aggregate data.
+- ~90% of data received is unnecessary; ~80% of time spent processing data.
+- Scripts crash due to anomalies or schema changes from software team.
+- Data available is typically **two days old**; marketing team wants **real-time** or near real-time.
+- Manual processing causes delays and unpredictability.
+
+## Use Cases Identified
+### 1. **Dashboards for Marketing**
+- Show product sales by category and region over the past 30 days.
+- Include totals and timeline plots (daily/hourly).
+- Marketing wants **current metrics**, not delayed data.
+
+### 2. **Recommendation Engine**
+- Currently serving popular product recommendations (not personalized).
+- Plans to train a personalized recommender model.
+- Needs:
+  - More training data
+  - A system to serve user activity data to the model
+  - Serving of recommendation outputs back to the platform in real time
+
+## Actions Needed (Implied Requirements)
+- More direct and timely ingestion of data from the sales database.
+- Automated, orchestrated transformation and processing to avoid manual work.
+- Serve cleaned, structured data in required formats for:
+  - Dashboards
+  - Recommendation engine
+- Handle schema changes and anomalies consistently.
+- Reduce data latency according to marketing needs (exact tolerance requires follow-up).
+
+## Follow-Up Needed
+- Clarify from marketing what “real-time” means (seconds/minutes/hour/today-level).
+- Understand what actions marketing will take with more current data.
+- Translate stakeholder goals into:
+  - Functional requirements (what the system must do)
+  - Non-functional requirements (latency, robustness, automation)
+
+## Summary of Agreement
+- Automated ingestion + automated processing + serving in correct format woul
+
+
+
+------------
+
+
+
+
+
+
