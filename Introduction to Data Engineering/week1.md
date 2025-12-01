@@ -315,6 +315,209 @@ Video
 
 
 
+# Data Engineering on the Cloud — Essential Notes
+
+## High-Level Foundation
+- Week 1 focused on high-level concepts:
+  - Data engineering life cycle and undercurrents  
+  - History of data engineering  
+  - Stakeholder collaboration and delivering value  
+- This high-level mindset is foundational and revisited throughout the specialization.
+
+## Tools and Technologies
+- Data engineering tools vary widely between companies.
+- With the advent of the public cloud and many open-source/proprietary tools, companies of all sizes now use similar high-performance technologies.
+
+## Cloud vs On-Premises
+- Historically, companies built and maintained **on-premises** data infrastructure.
+- Many companies today build their systems **entirely on the Cloud**.
+- Some companies still maintain on-premises systems due to:
+  - Regulatory constraints  
+  - Legacy systems they prefer to maintain  
+- Data engineers may encounter on-premises systems or be tasked with **migrating** them to the Cloud.
+
+## Cloud First Reality
+- Increasing likelihood that data engineering work happens **exclusively on the Cloud**.
+- AWS is the first and most widely used public cloud.
+- Other providers include Google Cloud Platform and Microsoft Azure.
+
+## Approach in This Specialization
+- Cloud-first approach; no deep focus on on-premises or migration considerations.
+- Partnered with **AWS** for hands-on labs.
+- You will build data pipelines and architectures using AWS tools used widely in industry.
+
+## Learning Goals
+- By the end of Course 1:
+  - Take a set of technical requirements.
+  - Stand up a **Cloud-based data pipeline** using appropriate AWS tools.
+
+## AWS Learning Approach
+- AWS has a large set of tools and resources.
+- The specialization uses a **just-in-time** approach:
+  - Learn specific tools only when needed in labs.
+  - No prior Cloud experience required.
+
+## Upcoming
+- Introduction to AWS tools and resources with **Morgan Willis**, principal Cloud technologist.
+
+--------
+
+# Intro to the AWS Cloud — Essential Notes
+
+## What the AWS Cloud Is
+- AWS describes the cloud as **on-demand delivery of IT resources over the Internet with pay-as-you-go pricing**.
+- Resources can be provisioned instantly and shut down when no longer needed.
+- You only pay for what you use.
+
+## Difference from On-Premises
+- On-premises systems require long-term commitment to hardware.
+- AWS avoids upfront purchasing and long-term maintenance of data centers.
+
+## Core IT Resources on AWS
+### Compute (run code)
+- Virtual machines
+- Container hosting services
+- Serverless functions
+
+### Storage (store data)
+- Amazon S3 (object storage)
+- Amazon Elastic Block Store (block storage)
+- Databases:
+  - Relational
+  - NoSQL
+  - Graph, etc.
+
+### Networking (connect resources)
+- Amazon Virtual Private Cloud (VPC) — private network in the cloud.
+
+## Additional AWS Categories
+- Security
+- Data streaming
+- Ingestion
+- Transformation
+- Other specialized services
+
+## Scalability and Elasticity
+- Cloud resources scale **up and down automatically**.
+- No need to predict capacity in advance.
+- Handles spikes in demand.
+- Reduces cost by avoiding unused resources.
+
+## Analogy
+- AWS works like electricity consumption:
+  - Pay for usage
+  - Implementation details are abstracted away
+
+## AWS Global Infrastructure
+- AWS services run in physical data centers globally.
+- You interact with them via **APIs**.
+
+### Regions
+- Geographical areas containing multiple data centers.
+- Examples:  
+  - US East (N. Virginia)  
+  - Asia Pacific (Mumbai)  
+  - Europe (Frankfurt)
+
+### Availability Zones (AZs)
+- Each region has multiple AZs.
+- Each AZ contains multiple data centers.
+- AZs are isolated enough to withstand localized failures.
+- Designed for high availability and failover.
+
+### Connectivity
+- Regions and AZs are connected by low-latency AWS global network fiber links.
+
+## Building on AWS
+- Data engineers combine multiple AWS services like building blocks.
+- AWS has **200+ services**:
+  - General purpose
+  - Specialized
+
+## Summary
+- Concepts covered (regions, AZs, scaling, core resources) recur throughout AWS learning.
+- Next: core AWS services used in these courses.
+
+
+--------
+
+ # AWS Regions and Availability Zones
+ https://www.coursera.org/learn/intro-to-data-engineering/supplement/1WSy7/aws-regions-and-availability-zones
+
+
+--------
+# Intro to AWS Core Services — Essential Notes
+
+## Core Service Categories (overview order)
+- **Compute**
+- **Network**
+- **Storage**
+- **Databases**
+- **Security**
+
+## Compute
+- **Amazon Elastic Compute Cloud (EC2):** provides virtual machines (VMs) → EC2 instance = launched VM.
+  - Complete control over OS, applications, instance.
+  - Use cases: development machine, web server, containers, ML workloads.
+  - Scale horizontally by deploying single instance or fleet.
+- Other compute options:
+  - **AWS Lambda** (serverless functions — code runs in response to triggers/events)
+  - **Amazon ECS / EKS** (container hosting services)
+
+## Network
+- **Amazon Virtual Private Cloud (VPC):** private network in the cloud.
+  - Choose private IP space and partition into **subnets**.
+  - A single VPC spans all AZs within a region; cannot span regions.
+- Most AWS resources are **region-bound**.
+  - Data and resources do not leave a region unless explicitly designed to do so.
+- When creating resources (e.g., EC2, instance-based databases), select **VPC** and **AZ**.
+
+## Storage
+- Storage types: **Object**, **Block**, **File**.
+- **Object storage:** used for unstructured data (documents, logs, photos, videos); Amazon S3 is the object store referenced.
+- **Block storage:** for databases, VM file systems, low-latency/high-performance needs.
+  - **Amazon EBS** volumes attach to EC2 instances and mount to the OS.
+- **File storage:** hierarchical files/directories; **Amazon EFS** provides scalable file storage mountable by multiple systems.
+
+## Databases
+- Databases provide structured-data management, complex querying, indexing (distinct from general storage).
+- Key services in these courses:
+  - **Amazon RDS** (Relational Database Service)
+  - **Amazon Redshift** (data warehouse for storing, transforming, and serving data)
+- Other AWS database services exist; RDS and Redshift are primary here.
+
+## Security — Shared Responsibility Model
+- **Shared responsibility model:** AWS = security *of* the cloud; you = security *in* the cloud.
+- Analogy: apartment building (owner secures building; tenant uses locks).
+- Example (EC2):
+  - AWS responsible for physical hardware, facilities, hypervisor layer.
+  - You responsible for guest OS management, software updates/patching, networking config (firewalls), data access, encryption.
+- Each AWS service draws the responsibility line differently.
+
+## Labs and Optional Account
+- Labs provide access to AWS resources; creating a personal AWS account is optional.
+- Next: walkthrough of the AWS Management Console (optional account setup instructions available).
+
+
+--------
+# Compute - Amazon Elastic Compute Cloud (EC2)
+https://www.coursera.org/learn/intro-to-data-engineering/supplement/fyNJD/compute-amazon-elastic-compute-cloud-ec2
+
+--------
+
+
+--------
 
 
 
+--------
+
+
+--------
+
+
+
+--------
+
+
+--------
