@@ -1,10 +1,19 @@
+## Glossary
 
-
+- network
+- IP address
+- VPC
+- subnet
+- ami
+- 
 
 ---------
 
+# Notes Start
 
-# Program Syllabus
+https://www.coursera.org/learn/intro-to-data-engineering/supplement/wZkTt/lecture-notes-w1
+
+## Program Syllabus
 
 - https://www.coursera.org/learn/intro-to-data-engineering/supplement/GScau/program-syllabus
 - https://www.w3schools.com/python/pandas/default.asp
@@ -502,6 +511,59 @@ Video
 --------
 # Compute - Amazon Elastic Compute Cloud (EC2)
 https://www.coursera.org/learn/intro-to-data-engineering/supplement/fyNJD/compute-amazon-elastic-compute-cloud-ec2
+- hypervisor
+- The benefit of this virtualization or abstraction is that you can create more than one virtual machine that shares the same underlying physical resources. This helps achieve efficient and cost-effective use of resources. The sharing of these resources is done through a software component called the hypervisor.
+
+<img width="1600" height="660" alt="image" src="https://github.com/user-attachments/assets/4349979a-8dbe-48ad-b72f-90d56abefcb9" />
+
+
+- https://aws.amazon.com/what-is/hypervisor/
+- 
+
+--------
+# Networking - Virtual Private Cloud (VPC) & Subnets
+
+- https://www.coursera.org/learn/intro-to-data-engineering/supplement/MMwyn/networking-virtual-private-cloud-vpc-subnets
+- Resources within the same VPC can communicate with each other
+
+--------
+
+# Week 1 Summary — Essential Notes
+
+- Completed Week 1: oriented to **thinking like a data engineer** and AWS terminology/concepts.
+- Scenario reviewed: hired as a **data engineer** at an e-commerce company.
+- Possible roles encountered in practice:
+  - First data engineer building systems from scratch
+  - Joining an established data team
+  - Inheriting and modifying existing data infrastructure
+- First step to building successful data systems:
+  - **Understand stakeholder needs**
+  - **Translate needs into system requirements**
+  - Choose appropriate tools and technologies
+  - Build and evaluate the data system
+- Framework for thinking like a data engineer (stages in order):
+  1. Identify **business goals** and **stakeholder needs**
+  2. Define **requirements** for the system
+  3. Choose **tools and technologies**
+  4. Build and **evaluate** the data system
+- Reviewed history/context of data and data engineering.
+- Adopted a **cloud-first** approach for the specialization.
+- Introduced core AWS concepts and resources with Morgan Willis.
+- Course outcome for Week 1:
+  - Be prepared to take technical requirements and stand up Cloud-based data pipelines.
+- Next week:
+  - Deep dive into each **stage** and **undercurrents** of the data engineering life cycle
+  - Hands-on lab: build first data pipeline on **AWS**
+
+
+--------
+# Resources
+
+- https://www.coursera.org/learn/intro-to-data-engineering/supplement/WFANk/week-1-resources
+
+--------
+
+
 
 --------
 
@@ -510,14 +572,5 @@ https://www.coursera.org/learn/intro-to-data-engineering/supplement/fyNJD/comput
 
 
 
---------
 
 
---------
-
-
-
---------
-
-
---------
